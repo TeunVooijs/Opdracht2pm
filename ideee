@@ -1,0 +1,35 @@
+print_mode
+wel:
+letters 
+tekens
+
+niet:
+\n
+comments
+
+
+
+comment_mode
+wel:
+comments
+
+niet:
+geen comment
+
+
+
+
+
+newline_mode
+wanneer \n
+
+
+
+
+
+
+num_mode
+wanneer getal
+
+
+

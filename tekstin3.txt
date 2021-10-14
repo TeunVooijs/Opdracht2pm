@@ -1,0 +1,10 @@
+Dit is een oefen bestandje //Diet dasd
+hier test ik 
+wat het programma doet {
+    123
+    wanneer er bepaalde
+    dingen worden gezegd
+    // 34
+
+
+}
