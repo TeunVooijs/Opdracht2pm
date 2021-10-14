@@ -1,10 +1,25 @@
 Dit is een oefen bestandje //Diet dasd
 hier test ik 
-wat het programma doet {
+wat het programma doet {{
     123
-    wanneer er bepaalde
+    wanneer er bepaalde 234
     dingen worden gezegd
     // 34
+}
+}
 
+{
+if (jehoere moeder) {
+    chinees
+}
 
+if(hallo)
+{
+    jhsdfvhj
+}
+
+if(){fdsdfdsf};
+
+sd() // {
+    {}
 }

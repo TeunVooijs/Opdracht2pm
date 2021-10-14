@@ -3,21 +3,24 @@
 #include <fstream>
 using namespace std;
 
+
 int main(){
 // ifstream invoer ("U:\\Semester1\\ProgrammeerMethoden\\Opdracht2\\tekstin.txt", ios::binary);
 // ifstream invoer ("U:\\Semester1\\ProgrammeerMethoden\\Opdracht2\\tekstin2.txt", ios::binary);
 ifstream invoer ("U:\\Semester1\\ProgrammeerMethoden\\Opdracht2\\tekstin3.txt", ios::binary);
-// ifstream invoer ("U:\\Semester1\\ProgrammeerMethoden\\CppOpdracht1\\main.cpp", ios::binary);
 ofstream uitvoer ("U:\\Semester1\\ProgrammeerMethoden\\Opdracht2\\tekstuit.txt", ios::out);
     bool print_mode=1,num_mode=0, newline_mode=0, comment_mode=0, space_mode=0; // Mode 1 is aan mode 0 is uit
     bool end;
     char kar, pre_kar,pre_pre_kar, cnum;
-    int raarnum=0, num,rest;
-    int aantal_tabs=0, tab_diepte=4;
-    int spaties,i,n,s;
+    int num, getal;
+    int aantal_tabs=0, tab_diepte=4, spaties;
+    int i,n,s;
     int match, matches;
-    char t1='v', t2='e', t3='l';        // test char
     
+    char t1=letter_invoer();
+    char t2=letter_invoer(t1);
+    char t3=letter_invoer(t1,t2);
+
     kar = invoer.get();
     
     while ( ! invoer.eof ( ) ) {
@@ -49,16 +52,15 @@ ofstream uitvoer ("U:\\Semester1\\ProgrammeerMethoden\\Opdracht2\\tekstuit.txt",
             }
         }
         
-
-        
         if (kar>='0' && kar<='9' && comment_mode==0){
             num=kar-48;
             end=0;
-            number_adder(num, end);
+            getal=number_adder(getal, num, end);
         }
         else if(pre_kar>='0' && pre_kar<='9' && comment_mode==0){
             end=1;
-            number_adder(0,end);
+            num=0;
+            getal=number_adder(getal, num,end);
         }
         
         
@@ -122,15 +124,39 @@ int kar_test(char kar, char pre_kar, char pre_pre_kar, char t1, char t2, char t3
     return 0;
 }
 
-int number_adder(int num, bool end){
-    int getal=0;
+int number_adder(int getal ,int num, bool end){
     if (end==0){
         getal=(getal*10)+num;
-        cout << getal << endl;
+        // cout << getal << endl;
+        return getal;
     }
     else if (end==1){
-        // cout << getal << endl << endl;
+        cout << getal << endl;
+        // collatz(getal);
         getal=0;
+        return getal;
     }
     return 0;
+}
+
+// void collatz(double getal){
+
+// }
+
+char letter_invoer(char t1 = '-', char t2 = '-'){
+    char letter;
+    while(true){
+        cout << "Letter: " << endl;
+        cin >> letter;
+        if (letter>='a' && letter <='z'){
+            if(letter != t1 && letter != t2){
+                return letter;
+            }
+            else{
+                cout << "is dubbel bruv" << endl;
+            }
+        }
+        cout << "is grote letter a mattie" << endl;   
+    }
+
 }
