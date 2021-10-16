@@ -1,9 +1,10 @@
 Dit is een oefen bestandje //Diet dasd
 hier test ik 
 wat het programma doet {{
-    123
-    wanneer er bepaalde 234
-    dingen worden gezegd
+
+    324
+    wanneer er bepaalde44
+    dingen worden gezegd 523
     // 34
 }
 }

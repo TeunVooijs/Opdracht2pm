@@ -1,0 +1,4 @@
+hadshdHHHASDHASsadasd 
+\\asdas 
+asd4234234if (pre_kar=='/' && kar=='/'){....print_mode=0;....comment_mode=1;} abcabbcif (kar=='\n'){....newline_mode=1;....comment_mode=0;}if (newline_mode==1 && kar!=' '){....print_mode=1;}if (kar>='0' && kar<='9'){....num_mode=1;....print_mode=0;}if (pre_kar=='{'){....aantal_tabs+=1;}if (pre_kar=='}'){....aantal_tabs-=1;}if (aantal_tabs>0 && pre_kar=='\n' && comment_mode==0){....spaties=aantal_tabs*tab_diepte;....for(i = spaties; i > 0; i--){........uitvoer.put('.');........
+........}}if (kar!='/' && pre_kar!='/' && print_mode==1){....uitvoer.put (kar);}if (pre_kar=='/' && kar!='/' && print_mode==1){....uitvoer.put(pre_kar);....uitvoer.put(kar);}pre_kar=kar;kar=invoer.get();
